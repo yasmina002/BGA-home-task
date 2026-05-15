@@ -110,23 +110,6 @@ npm run serve   # builds the React app, then serves everything from port 3002
 
 ---
 
-## Environment Variables
-
-Copy `.env.example` to `.env` and adjust as needed.
-
-| Variable | Default | Description |
-|---|---|---|
-| `NODE_ENV` | `development` | `development` or `production` |
-| `PORT` | `3002` | API server port |
-| `CORS_ORIGIN` | `http://localhost:3000` | Allowed CORS origin |
-| `BLOCKCHAIN_DIFFICULTY` | `2` | Proof-of-work difficulty |
-| `BLOCKCHAIN_MINING_REWARD` | `100` | Coinbase reward per mined block |
-| `INITIAL_MINER_ADDRESS` | `genesis-miner` | Address for the first demo block reward |
-| `SEED_DEMO_DATA` | `true` | Set to `false` to start with an empty chain |
-| `REACT_APP_API_URL` | `http://localhost:3002` | Used by the React app |
-
----
-
 ## API Reference
 
 All API responses share a common envelope:
@@ -226,7 +209,6 @@ PORT=3003 npm run dev
 
 **Frontend can't reach the API**
 - Confirm `npm run dev` is running on port 3002
-- Check `REACT_APP_API_URL` in your `.env`
 - Confirm `src/setupProxy.js` target matches `PORT`
 
 **Chain resets on every restart**
